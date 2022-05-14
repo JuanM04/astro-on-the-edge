@@ -12,6 +12,7 @@ const city = decodeURIComponent(Astro.request.headers.get('x-vercel-ip-city'))
 			<p>Your city<br /><strong>{city}</strong></p>
 			<p>Your IP address<br /><strong>{ip}</strong></p>
 		</div>
+		<p class="footer">Built with <a href="https://github.com/withastro/astro">Astro</a> and <a href="https://github.com/withastro/astro/tree/main/packages/integrations/vercel">@astrojs/vercel</a> — <a href="https://github.com/JuanM04/astro-on-the-edge">Source</a></p>
 	</main>
 </Layout>
 
@@ -77,5 +78,15 @@ const city = decodeURIComponent(Astro.request.headers.get('x-vercel-ip-city'))
 
 	.banner strong {
 		font-size: 1.75em;
+	}
+
+	.footer {
+		font-size: 0.8rem;
+		text-align: center;
+		margin-top: 3rem;
+	}
+
+	.footer a {
+		text-decoration: none;
 	}
 </style>
